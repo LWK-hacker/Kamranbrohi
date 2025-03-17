@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kamran•Brohi</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: white;
+      text-align: center;
+    }
+    
+    /* Fire Background Animation */
+    @keyframes fireEffect {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://media.giphy.com/media/l3vRnCjHW8U6ZB3za/giphy.gif') no-repeat center;
+      background-size: cover;
+      opacity: 0.3;
+      animation: fireEffect 5s infinite alternate;
+      z-index: -1;
+    }
+    
+    /* Fixed Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(18, 18, 18, 0.9);
+      padding: 15px 0;
+      z-index: 1000;
+    }
+    
+    /* Profile Container Inside Header */
+    .profile-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .profile-circle {
+      width: 90px;
+      height: 90px;
+      background-color: black;
+      border: 3px solid white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 42px;
+      animation: rotateProfile 5s linear infinite;
+    }
+    @keyframes rotateProfile {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .name {
+      font-size: 24px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .tick {
+      width: 20px;
+      height: 20px;
+    }
+    .icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 10px 0;
+    }
+    .icons a {
+      width: 45px;
+      height: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid white;
+      border-radius: 50%;
+      transition: 0.3s;
+    }
+    .icons a:hover {
+      background-color: white;
+    }
+    .icons img {
+      width: 25px;
+      height: 25px;
+      filter: invert(1);
+    }
+    .icons a:hover img {
+      filter: invert(0);
+    }
+    
+    /* Main Content */
+    main {
+      margin-top: 220px; /* Adjusted margin for the fixed header */
+      padding-bottom: 20px;
+    }
+    
+    /* Buttons */
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px;
+    }
+    .btn {
+      width: 90%;
+      max-width: 400px;
+      margin: 15px auto;  /* Increased margin for better spacing */
+      padding: 12px;
+      border: 2px solid white;
+      border-radius: 25px;
+      background: transparent;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background-color: white;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="profile-container">
+      <!-- Rotating Profile Circle with Music Emoji -->
+      <div class="profile-circle">🎵</div>
+      
+      <!-- Name & Verified Tick -->
+      <div class="name">
+        Kamran•Brohi  
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" class="tick" alt="Verified">
+      </div>
+      
+      <!-- Social Media Icons -->
+      <div class="icons">
+        <a href="https://www.instagram.com/kamran_brohi_72" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram">
+        </a>
+        <a href="https://whatsapp.com/channel/0029VagXoSB05MUf3KNDz627" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        </a>
+        <a href="https://open.spotify.com/artist/6qqNVTkY8uBg9cP3Jd7DAH" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify">
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="buttons">
+      <button class="btn" onclick="window.open('https://open.spotify.com/track/6dOtVTDdiauQNBQEDOtlAB?si=OfnnekLlR-m07Xo30H_4Kg', '_blank')">
+        Watch The Birds of a Feather Official Music Video
+      </button>
+      <button class="btn" onclick="window.open('https://www.amazon.com/dp/example2', '_blank')">
+        Download Birds of a Feather Live on Amazon
+      </button>
+      <button class="btn" onclick="window.open('https://open.spotify.com/track/7BRD7x5pt8Lqa1eGYC4dzj?si=H7N0qjDLRxCf-ehGlLc0kQ', '_blank')">
+        Watch The Chihiro Official Music Video
+      </button>
+      <button class="btn" onclick="window.open('https://open.spotify.com/album/7aJuG4TFXa2hmE4z1yxc3n?si=OwJ55dO_R9Sv76g0T6mb5w', '_blank')">
+        Listen to Hit Me Hard and Soft
+      </button>
+      <button class="btn" onclick="window.open('https://open.spotify.com/track/1CsMKhwEmNnmvHUuO5nryA?si=Ey6Yjg8rSWSNniTAia3Fug', '_blank')">
+        Skinny Echoes: A Journey Through Darkness
+      </button>
+      <button class="btn" onclick="window.open('https://open.spotify.com/track/629DixmZGHc7ILtEntuiWE?si=lTbYgYYZSzu1zmFjHn00Qw', '_blank')">
+        Billie Eillish - LUNCH (Official Music)
+      </button>
+      <button class="btn" onclick="window.open('https://open.spotify.com/track/3QaPy1KgI7nu9FJEQUgn6h?si=8Iw301daQbyC24wCEYCLPg', '_blank')">
+        Billie Eillish - Wildflower (Official Lyrics)
+      </button>
+    </div>
+  </main>
+
+</body>
+</html>
